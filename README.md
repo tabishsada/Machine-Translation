@@ -5,6 +5,7 @@ Data can be found at:
 
 To train 4 layer nmt model:
 
+```
 python -m nmt.nmt \
     --src=vi --tgt=en \
     --vocab_prefix=/scratch/vbg221/tmp3/nmt_data/vocab.bpe.32000  \
@@ -33,3 +34,4 @@ python -m nmt.nmt \
     --subword_option=bpe \
     --beam_width=10 \
     --length_penalty_weight=1.0
+```
