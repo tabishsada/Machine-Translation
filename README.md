@@ -5,7 +5,7 @@ Script to get training data:
 srun nmt/scripts/wmt16_en_de.sh nmt_data
 ```
 
-To train 4 layer nmt model:
+To train 4 layer LSTMs for 1024 units:
 
 ```
 python -m nmt.nmt \
