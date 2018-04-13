@@ -1,7 +1,9 @@
 # Machine-Translation
 
-Data can be found at:
-
+Script to get training data:
+```
+srun nmt/scripts/wmt16_en_de.sh nmt_data
+```
 
 To train 4 layer nmt model:
 
