@@ -8,7 +8,7 @@ srun nmt/scripts/wmt16_en_de.sh nmt_data
 To train 4 layer LSTMs for 1024 units:
 
 ```
-python nmt \
+python nmt.py \
     --src=de --tgt=en \
     --vocab_prefix=/scratch/vbg221/tmp3/nmt_data/vocab.bpe.32000  \
     --train_prefix=/scratch/vbg221/tmp3/nmt_data/train.tok.clean.bpe.32000 \
