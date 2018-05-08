@@ -1,6 +1,26 @@
 # Machine-Translation
 
+## Transformer based model
+
+File description:
+* transformer_hyperparams.py includes all hyper parameters that are needed.
+* transformer_preprocess.py creates vocabulary files for the source and the target.
+* transformer_data_load.py contains functions regarding loading and batching data.
+* transformer_modules.py has all building blocks for encoder/decoder networks.
+* transformer_train.py has the model.
+* transformer_live.py is for evaluation.
+
+Training and Evaluation:
+1. Adjust hyper parameters in transformer_hyperparams.py.
+2. Run transformer_preprocess.py to generate vocab files.
+3. Run transformer_train.py which will generate checkpoints.
+4. Run transformer_live.py to evaluate and get BLEU scores.
+
+
+
+## RNN based NMT
 Script to get training data:
+
 ```
 srun nmt/scripts/wmt16_en_de.sh nmt_data
 ```
@@ -8,6 +28,7 @@ srun nmt/scripts/wmt16_en_de.sh nmt_data
 To train 4 layer LSTMs for 1024 units:
 
 ```
+cd nmt
 python nmt.py \
     --src=de --tgt=en \
     --vocab_prefix=/scratch/vbg221/tmp3/nmt_data/vocab.bpe.32000  \
